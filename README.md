@@ -2,14 +2,14 @@
 
 HTTP Man In The Middle (MITM) Proxy written in node.js. Supports capturing and modifying the request and response data.
 
-[![NPM version](http://img.shields.io/npm/v/http-mitm-proxy.svg)](https://www.npmjs.com/package/http-mitm-proxy)
+[![NPM version](http://img.shields.io/npm/v/electron-mitm-proxy.svg)](https://www.npmjs.com/package/electron-mitm-proxy)
 [![](https://david-dm.org/joeferner/node-http-mitm-proxy.svg)](https://david-dm.org/joeferner/node-http-mitm-proxy)
-[![Downloads](https://img.shields.io/npm/dm/http-mitm-proxy.svg)](https://www.npmjs.com/package/http-mitm-proxy)
+[![Downloads](https://img.shields.io/npm/dm/electron-mitm-proxy.svg)](https://www.npmjs.com/package/electron-mitm-proxy)
 ![Test Status](https://github.com/joeferner/node-http-mitm-proxy/workflows/Tests/badge.svg)
 
 # Install
 
-`npm install --save http-mitm-proxy`
+`npm install --save electron-mitm-proxy`
 
 ## Node.js Compatibility
 The library should work starting Node.js 8.x, but testing is only expected for currently supported LTS versions of Node.js starting Node.js 12.x . use on your own risk with non LTS Node.js versions.
@@ -22,7 +22,7 @@ type definitions are now included in this project, no extra steps required.
 This example will modify any search results coming from google and replace all the result titles with "Pwned!".
 
 ```javascript
-var Proxy = require('http-mitm-proxy');
+var Proxy = require('electron-mitm-proxy');
 var proxy = Proxy();
 
 proxy.onError(function(ctx, err) {
@@ -124,7 +124,7 @@ __Arguments__
  * options - An object with the following options:
   * port - The port or named socket to listen on (default: 8080).
   * host - The hostname or local address to listen on (default: 'localhost'). Pass '::' to listen on all IPv4/IPv6 interfaces.
-  * sslCaDir - Path to the certificates cache directory (default: process.cwd() + '/.http-mitm-proxy')
+  * sslCaDir - Path to the certificates cache directory (default: process.cwd() + '/.electron-mitm-proxy')
   * keepAlive - enable [HTTP persistent connection](https://en.wikipedia.org/wiki/HTTP_persistent_connection)
   * timeout - The number of milliseconds of inactivity before a socket is presumed to have timed out. Defaults to no timeout.
   * httpAgent - The [http.Agent](https://nodejs.org/api/http.html#http_class_http_agent) to use when making http requests. Useful for chaining proxys. (default: internal Agent)
